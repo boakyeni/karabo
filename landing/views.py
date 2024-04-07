@@ -9,3 +9,7 @@ def home(request):
 
 def about(request):
     return render(request, "landing/about.html", {})
+
+
+def pricing(request):
+    return render(request, "landing/pricing.html", {})
