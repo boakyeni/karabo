@@ -12,9 +12,9 @@ def login(request):
 def register(request):
 
     if request.method == "POST":
-        email = request.post["email"].replace(" ", "").lower()
-        password1 = request.post["password1"]
-        password2 = request.post["password2"]
+        email = request.POST["email"].replace(" ", "").lower()
+        password1 = request.POST["password1"]
+        password2 = request.POST["password2"]
 
         if password1 != password2:
             messages.error(request, "Passwords do not match")
