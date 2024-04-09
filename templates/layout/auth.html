@@ -84,6 +84,11 @@
                 </a>
               </div>
               <!-- /Logo -->
+              {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} mb-4" role="alert">
+                    <strong>{{message}}</strong>
+                </div>
+              {% endfor %}
               {% block body %}
               {% endblock %}
             </div>
